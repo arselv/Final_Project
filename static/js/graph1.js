@@ -27,9 +27,13 @@ d3.csv("static/data/graph_1.csv").then((data) => {
     name: "Predicted Prices",
   };
 
+  let layout = {
+    title: "LSTM Neural Network Model Training and Fitting",
+  };
+
   let plot_data = [trace_actual, trace_predictions];
 
-  Plotly.newPlot("plot1", plot_data);
+  Plotly.newPlot("plot1", plot_data, layout);
 });
 
-// Forecasting Graph
+
