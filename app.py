@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import create_csvs
 
 app = Flask(__name__)
 
@@ -10,6 +11,11 @@ def index():
 @app.route('/about')
 def about():
   return render_template("about.html")
+
+@app.route('/create-csvs')
+def create():
+  create_csvs.make_csvs()
+  return "created csvs successfully"
 
 
 
