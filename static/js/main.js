@@ -83,6 +83,7 @@ const drawGraphs = tickerStr => {
 
     d3.select('#modelLoss')
       .attr("src","static/images/models/" + tickerStr + "_loss.png")
+      .style("width","100%")
 
     d3.select("#stock-value").text("Stock: "+ tickerStr + " ...  finished predicting.");
 
