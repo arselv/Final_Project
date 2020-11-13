@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings('ignore', category=DeprecationWarning)
+warnings.filterwarnings('ignore', category=FutureWarning)
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
@@ -6,7 +9,7 @@ import os
 import yfinance as yf
 
 def make_csvs():
-  tickers = ["AAPL","AMZN","GOOG","MSFT","TLSA"]
+  tickers = ["AAPL","AMZN","GOOG","MSFT","TSLA"]
 
   for tickerStr in tickers:
 

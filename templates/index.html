@@ -15,6 +15,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="static\css\style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -47,7 +48,7 @@
     <div class="jumbotron jumbotron-fluid text-center">
       <h1 class="display-4">Billionaire Wealth Management</h1>
       <p class="lead">A division of Stratton Oakmont, Inc™</p>
-      <hr class="my-4" />
+      <!-- <hr class="my-4" /> -->
     </div>
     <div class="container">
       <div class="row text-center">
@@ -62,23 +63,13 @@
         <div class="col-md-8">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Stock Value: MSFT</h4>
+              <h4 id="stock-value" class="card-title">Stock: </h4>
+              <!-- <div id="plot0"></div> -->
               <div id="plot1"></div>
-              <img
-                src="../static/img/original_stock.png"
-                width="100%"
-                height="auto"
-                alt=""
-              />
 
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                hendrerit lacus vitae cursus sollicitudin. Ut sed elit sapien.
-                Nam faucibus ligula quis augue ultrices, eu efficitur ex
-                malesuada.
-              </p>
+              <p id="card-text"class="card-text"></p>
               <div id="plot2"></div>
-              
+              <img id="modelLoss" src="" alt="">
             </div>
           </div>
         </div>
@@ -89,23 +80,24 @@
               <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
               <label for="select">Select:</label>
               <select name="select" id="select">
+                <option value="">PICK STOCK</option>
                 <option value="msft">Microsoft</option>
                 <option value="aapl">Apple</option>
-                <option value="googl">Google</option>
+                <option value="goog">Google</option>
                 <option value="amzn">Amazon</option>
                 <option value="tsla">Tesla</option>
               </select>
-              <button type="submit" value="Submit">Submit</button>
-              <div id="output">
+              <!-- <button id="submitButton" type="submit" value="Submit">Submit</button> -->
+              <!-- <div id="output">
                 <textarea name="comment" form="usrform">Console Log:</textarea>
-              </div>
+              </div> -->
             </div>
             <br />
             <br />
             <div class="card">
-              <div class="card-header">Predicted Stock</div>
+              <div class="card-header">Model Summary</div>
               <img
-                src="../static/img/predicted_stock.png"
+                src="static/images/models/model_summary.png"
                 width="100%"
                 height="auto"
                 alt=""
@@ -123,7 +115,8 @@
       <hr />
       <div class="row">
         <div class="text-center col-lg-6 offset-lg-3">
-          <h4>Footer</h4>
+          <h4>Brought to you by</h4>
+          <h4>Billionaire's Wealth Management</h4>
           <p>
             Copyright &copy; 2020 &middot; All Rights Reserved &middot; VHBP
           </p>
@@ -145,7 +138,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="static/js/graph1.js"></script>
-    <script src="static/js/graph2.js"></script>
+    <!-- <script src="static/js/graph1.js"></script> -->
+    <!-- <script src="static/js/graph2.js"></script> -->
+    <script src="static/js/main.js"></script>
   </body>
 </html>

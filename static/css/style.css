@@ -1,8 +1,13 @@
-#plot1 {
-  height: 400px;
+#plot1, #plot2 {
+  height: 0px;
   width: 100%;
+} 
+
+.jumbotron {
+  padding: 2rem 2rem;
 }
-#plot2 {
-  height: 400px;
-  width: 100%;
+
+.lead {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
